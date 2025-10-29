@@ -223,6 +223,22 @@ button {
     box-shadow: 0 0 15px rgba(255, 127, 158, 0.6);
 }
 
+#nossa-historia, #galeria {
+  position: relative;
+  min-height: 100vh;        /* ocupa toda a tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* empurra o botão para baixo */
+  align-items: center;       /* centraliza horizontalmente */
+  padding-bottom: 50px;      /* distância do botão para o final da tela */
+}
+
+.botao {
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+
 button:hover {
     background-color: #ff5e82;
     transform: translate(-50%, -50%) scale(1.05);

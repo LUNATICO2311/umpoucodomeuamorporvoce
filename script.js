@@ -9,7 +9,7 @@ const botaoVoltar2 = document.getElementById("voltar2");
 
 const botaoAvancar = document.createElement("button");
 botaoAvancar.textContent = "➡ Ver minhas razões";
-botaoAvancar.style.marginTop = "500px";
+botaoAvancar.style.marginTop = "300px";
 botaoAvancar.style.backgroundColor = "rgba(255,127,158,0.85)";
 botaoAvancar.style.padding = "12px 25px";
 botaoAvancar.style.borderRadius = "25px";
@@ -38,7 +38,7 @@ botaoAvancar.addEventListener("click", () => {
 
 const botaoAvancarGaleria = document.createElement("button");
 botaoAvancarGaleria.textContent = "➡ Ver nossa galeria";
-botaoAvancarGaleria.style.marginTop = "500px"; 
+botaoAvancarGaleria.style.marginTop = "300px"; 
 botaoAvancarGaleria.style.backgroundColor = "rgba(255,127,158,0.85)";
 botaoAvancarGaleria.style.padding = "12px 25px";
 botaoAvancarGaleria.style.borderRadius = "25px";
