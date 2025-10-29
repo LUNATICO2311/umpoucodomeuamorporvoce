@@ -1,12 +1,8 @@
-body {
-    margin: 0;
-    height: auto;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: 'Poppins', sans-serif;
-    color: white;
-    overflow: auto;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  overflow: auto;
 }
 
 .home {
