@@ -1,0 +1,246 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: 'Poppins', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+.home {
+    position: relative;
+    text-align: center;
+}
+
+.conteudo {
+    position: relative;
+    display: inline-block;
+}
+
+.titulo {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    opacity: 0;
+    animation: aparecer 2s forwards;
+}
+
+.historia {
+  display: none;
+  position: relative;
+  background-image: url("imagens/nossa-historia.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  min-height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.historia::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.historia .overlay {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.razoes {
+  display: none;
+  position: relative;
+  background-image: url("imagens/razões-fundo.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #e7e7e7;
+  min-height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.razoes::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.2);
+}
+
+.razoes .overlay {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.razoes h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.razoes ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.razoes ul li {
+  margin-bottom: 15px;
+}
+
+.galeria {
+  display: none;
+  position: relative;
+  background-color: #fff0f5;
+  color: #5a3a4a;
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.galeria .overlay {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 80px 20px;
+}
+
+.galeria h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+
+.galeria .fotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  align-items: center;
+}
+
+
+.galeria .fotos img {
+  width: 280px;
+  height: auto;
+  border-radius: 10px;
+  background: white;
+  padding: 15px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  transform: rotate(calc(-5deg + 10deg * var(--i)));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+}
+
+.galeria .fotos img:hover {
+  transform: scale(1.08) rotate(0deg);
+  box-shadow: 0 12px 25px rgba(255,127,158,0.5);
+}
+
+.mensagem-final {
+  display: none;
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+  overflow: hidden;
+}
+
+.mensagem-final::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,127,158,0.1) 0%, transparent 70%);
+}
+
+.mensagem-final .overlay {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.mensagem-final h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ffb6c1;
+}
+
+.mensagem-final p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #f5f5f5;
+}
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.coracao {
+    width: 500px;
+    margin-top: 150px;
+    animation: pulsar 1.5s infinite ease-in-out;
+    filter: drop-shadow(0 0 20px #ff7f9e);
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); opacity: 0.9;}
+    50% { transform:  scale(1.1); opacity: 1;}
+    100% { transform: scale(1); opacity: 0.9;}
+}
+
+button {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 127, 158, 0.85);
+    border: none;
+    padding: 14px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255, 127, 158, 0.6);
+}
+
+button:hover {
+    background-color: #ff5e82;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .titulo {
+        font-size: 1.3rem;
+    }
+    .coracao {
+        width: 180px;
+    }
+    :button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
