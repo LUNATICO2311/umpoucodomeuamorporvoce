@@ -1,12 +1,12 @@
 body {
     margin: 0;
-    height: 100vh;
+    height: auto;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: 'Poppins', sans-serif;
     color: white;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .home {
