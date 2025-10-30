@@ -120,3 +120,20 @@ botaoEntrar.addEventListener("click", () => {
     }, 50);
   }, 800);
 });
+
+function atualizarContador() {
+  const inicio = new Date("2025-07-12T00:00:00");
+  const agora = new Date();
+  const diff = agora - inicio;
+
+  const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutos = Math.floor((diff / (1000 * 60)) % 60);
+  const segundos = Math.floor((diff / 1000) % 60);
+
+  const contador = document.getElementById("contador");
+  contador.textContent = `${dias} dias, ${horas}h ${minutos}m ${segundos}s 💕`;
+}
+
+setInterval(atualizarContador, 1000);
+atualizarContador();
